@@ -35,19 +35,6 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="157dp"
-        android:layout_height="217dp"
-        android:layout_marginStart="211dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/golden_ret" />
-
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
@@ -88,5 +75,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="367dp"
+        android:layout_height="494dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="312dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/doggo" />
 
 </android.support.constraint.ConstraintLayout>
