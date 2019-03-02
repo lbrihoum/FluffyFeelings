@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "379441463261",
+    "firebase_url": "https://fluffyfeelings-9f88b.firebaseio.com",
+    "project_id": "fluffyfeelings-9f88b",
+    "storage_bucket": "fluffyfeelings-9f88b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379441463261:android:5b52c5faa26328cd",
+        "android_client_info": {
+          "package_name": "com.example.bloop.fluffyfeelings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379441463261-6s9sk59lppmng7f32e8dggbgb4365413.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRgMmR5gGhppJlxm1loV1_g3X8XqsuVlM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
