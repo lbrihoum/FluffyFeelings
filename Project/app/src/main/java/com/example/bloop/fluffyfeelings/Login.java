@@ -29,18 +29,48 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Logging In...");
+
+        auth = FirebaseAuth.getInstance();
+
+        inputEmail = (EditText) findViewById(R.id.email);
+        inputPassword = (EditText) findViewById(R.id.password);
+        loginBtn = (Button) findViewById(R.id.loginButton);
 
         addButtonClickEventListener();
     }
 
     public void addButtonClickEventListener() {
-        Button button = (Button) findViewById(R.id.loginButton);
-
-        button.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login.this, AnimalChoice.class);
-                startActivity(intent);
+                final String email = inputEmail.getText().toString();
+                final String password = inputPassword.getText().toString();
+                try {
+                    if (password.length() > 0 && email.length() > 0) {
+                        progressDialog.show();
+                        auth.signInWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (!task.isSuccessful()) {
+                                            Toast.makeText(Login.this, "Authentication Failed", Toast.LENGTH_LONG).show();
+                                            Log.v("error", task.getResult().toString());
+                                        } else {
+                                            Intent intent = new Intent(Login.this, AnimalChoice.class);
+                                            startActivity(intent);
+                                            progressDialog.dismiss();
+                                        }
+                                        progressDialog.dismiss();
+                                    }
+                                });
+                    } else {
+                        Toast.makeText(Login.this, "Fill All Fields", Toast.LENGTH_LONG).show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "379441463261-7s9k4idfp59a09u5blr4ds30hkhtbjg5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bloop.fluffyfeelings",
+            "certificate_hash": "6da7c68d591857b3fff5a5ba5d2a40ff1f3b00c0"
+          }
+        },
+        {
           "client_id": "379441463261-6s9sk59lppmng7f32e8dggbgb4365413.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379441463261-6s9sk59lppmng7f32e8dggbgb4365413.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
