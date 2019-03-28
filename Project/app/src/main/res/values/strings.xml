@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FluffyFeelings</string>
+    <string name="login">Login</string>
+    <string name="relax">it"'"s time to relax</string>
+    <string name="ff">Fluffy Feelings</string>
+    <string name="email">email address</string>
+    <string name="passw">password</string>
+    <string name="whatsee">what would you like to see?</string>
 </resources>

@@ -4,46 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#aec6cf"
+    android:background="#C0F7FA"
     tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/login_dog"
+        android:layout_width="465dp"
+        android:layout_height="584dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="264dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/doggo" />
 
     <TextView
         android:id="@+id/fluffyView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fluffy Feelings"
-        android:textSize="18dp"
+        android:fontFamily="@font/IndieFlower"
+        android:text="@string/ff"
+        android:textSize="28sp"
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063"
-        />
+        app:layout_constraintVertical_bias="0.08" />
 
     <TextView
         android:id="@+id/relaxView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="15dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/IndieFlower"
+        android:text="@string/relax"
+        android:textSize="18sp"
         android:typeface="serif"
-        android:text="it's time to relax"
-        app:layout_constraintTop_toBottomOf="@+id/fluffyView"
-        tools:layout_editor_absoluteX="176dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/fluffyView" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="wrap_content"
+        android:layout_width="213dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
         android:layout_marginTop="81dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
-        android:hint="Email Address"
+        android:fontFamily="@font/IndieFlower"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -52,13 +62,14 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="wrap_content"
+        android:layout_width="214dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
-        android:hint="Password"
+        android:fontFamily="@font/IndieFlower"
+        android:hint="@string/passw"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,19 +82,12 @@
         android:layout_marginStart="162dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="162dp"
-        android:text="Login"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/IndieFlower"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="367dp"
-        android:layout_height="494dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="312dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/doggo" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:background="@color/colorAccent" />
 
 </android.support.constraint.ConstraintLayout>

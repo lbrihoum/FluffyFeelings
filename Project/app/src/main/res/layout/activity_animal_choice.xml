@@ -12,12 +12,13 @@
         android:id="@+id/fluffyView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Fluffy Feelings"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/IndieFlower"
+        android:text="@string/ff"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
         android:typeface="serif"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,52 +27,24 @@
         android:id="@+id/choiceView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:text="what would you like to see?"
+        android:layout_marginTop="106dp"
+        android:fontFamily="@font/IndieFlower"
+        android:text="@string/whatsee"
         android:textColor="#FFFFFF"
-        android:textSize="16dp"
+        android:textSize="22sp"
         android:typeface="serif"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fluffyView2" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="161dp"
-        android:layout_height="171dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="112dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cat" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="412dp"
-        android:layout_height="230dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goButton"
-        app:srcCompat="@drawable/many_pets" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="221dp"
-        android:layout_height="262dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="136dp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/puppy_transparent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="175dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="175dp"
+        android:fontFamily="@font/IndieFlower"
         android:text="Cats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,8 +55,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="174dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="173dp"
+        android:fontFamily="@font/IndieFlower"
         android:text="Dogs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +70,7 @@
         android:layout_marginStart="173dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="174dp"
+        android:fontFamily="@font/IndieFlower"
         android:text="Birds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,8 +81,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="165dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="164dp"
+        android:fontFamily="@font/IndieFlower"
         android:text="Bunnies"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,8 +96,10 @@
         android:layout_marginStart="167dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="167dp"
+        android:fontFamily="@font/IndieFlower"
         android:text="Lizards"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
@@ -130,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="162dp"
         android:text="GO!"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,11 +117,40 @@
         app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="109dp"
-        android:layout_height="122dp"
-        app:srcCompat="@drawable/bunny_transparent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="361dp" />
+        android:id="@+id/bottom_pets"
+        android:layout_width="412dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goButton"
+        app:srcCompat="@drawable/many_pets" />
+
+    <ImageView
+        android:id="@+id/smol_doggo"
+        android:layout_width="247dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="208dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/puppy_transparent"
+        tools:layout_editor_absoluteX="176dp" />
+
+    <ImageView
+        android:id="@+id/sassy_cat"
+        android:layout_width="198dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="101dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat" />
+
+    <ImageView
+        android:id="@+id/bunbun"
+        android:layout_width="111dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="384dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bunny_transparent" />
 
 </android.support.constraint.ConstraintLayout>
