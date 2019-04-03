@@ -11,8 +11,8 @@
         android:id="@+id/login_dog"
         android:layout_width="465dp"
         android:layout_height="584dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/doggo" />

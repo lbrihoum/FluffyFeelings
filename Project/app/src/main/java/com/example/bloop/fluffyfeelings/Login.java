@@ -47,31 +47,39 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 final String email = inputEmail.getText().toString();
                 final String password = inputPassword.getText().toString();
-                try {
-                    if (password.length() > 0 && email.length() > 0) {
-                        progressDialog.show();
-                        auth.signInWithEmailAndPassword(email, password)
-                                .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        if (!task.isSuccessful()) {
-                                            Toast.makeText(Login.this, "Authentication Failed", Toast.LENGTH_LONG).show();
-                                            Log.v("error", task.getResult().toString());
-                                        } else {
-                                            Intent intent = new Intent(Login.this, AnimalChoice.class);
-                                            startActivity(intent);
-                                            progressDialog.dismiss();
-                                        }
-                                        progressDialog.dismiss();
-                                    }
-                                });
-                    } else {
-                        Toast.makeText(Login.this, "Fill All Fields", Toast.LENGTH_LONG).show();
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
+                if (password.length() == 0 || email.length() == 0) {
+                    Toast.makeText(Login.this, "Fill All Fields", Toast.LENGTH_LONG).show();
+                } else {
+                    progressDialog.show();
+                    Intent intent = new Intent(Login.this, AnimalChoice.class);
+                    startActivity(intent);
+                    progressDialog.dismiss();
                 }
+//                try {
+//                    if (password.length() != 0 || email.length() != 0) {
+//                        progressDialog.show();
+//                        auth.signInWithEmailAndPassword(email, password)
+//                                .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+//                                    @Override
+//                                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                                        if (!task.isSuccessful()) {
+//                                            Toast.makeText(Login.this, "Authentication Failed", Toast.LENGTH_LONG).show();
+//                                            Log.v("error", task.getResult().toString());
+//                                        } else {
+//                                            Intent intent = new Intent(Login.this, AnimalChoice.class);
+//                                            startActivity(intent);
+//                                            progressDialog.dismiss();
+//                                        }
+//                                        progressDialog.dismiss();
+//                                    }
+//                                });
+//                    } else {
+//                        Toast.makeText(Login.this, "Fill All Fields", Toast.LENGTH_LONG).show();
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
             }
         });
     }
+
 }
