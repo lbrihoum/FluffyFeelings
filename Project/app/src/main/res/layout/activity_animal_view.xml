@@ -10,14 +10,14 @@
 
     <ImageView
         android:id="@+id/placeholder"
-        android:layout_width="348dp"
-        android:layout_height="326dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="366dp"
+        android:layout_height="367dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="20dp"
         android:contentDescription="placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/holo_blue_bright" />
+        app:srcCompat="@drawable/husky_puppies" />
 
     <TextView
         android:id="@+id/textView"
@@ -35,8 +35,8 @@
         android:id="@+id/back_button"
         android:layout_width="110dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="152dp"
         android:background="@drawable/back_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,18 +45,18 @@
         android:id="@+id/next_button"
         android:layout_width="118dp"
         android:layout_height="70dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="152dp"
         android:background="@drawable/next_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="93dp"
-        android:layout_height="88dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginBottom="160dp"
+        android:id="@+id/like_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="232dp"
         android:background="@drawable/like_button"
         android:clickable="false"
         android:contextClickable="false"
