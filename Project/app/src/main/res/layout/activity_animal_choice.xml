@@ -53,7 +53,7 @@
         android:layout_height="168dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goButton"
+        app:layout_constraintTop_toBottomOf="@+id/lizardButton"
         app:srcCompat="@drawable/many_pets" />
 
     <ImageView
@@ -75,78 +75,67 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bunny_transparent" />
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="175dp"
+    <Button
+        android:id="@+id/catButton"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/indieflower"
+        android:background="#b4ecb4"
         android:text="Cats"
-        android:onClick="onCheckboxClicked"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choiceView" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="173dp"
+    <Button
+        android:id="@+id/dogButton"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/indieflower"
+        android:background="#b4ecb4"
         android:text="Dogs"
-        android:onClick="onCheckboxClicked"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="174dp"
-        android:fontFamily="@font/indieflower"
-        android:text="Birds"
-        android:onClick="onCheckboxClicked"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="165dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="164dp"
-        android:fontFamily="@font/indieflower"
-        android:text="Bunnies"
-        android:onClick="onCheckboxClicked"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="167dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="167dp"
-        android:fontFamily="@font/indieflower"
-        android:text="Lizards"
-        android:onClick="onCheckboxClicked"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/catButton" />
 
     <Button
+        android:id="@+id/birdButton"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/indieflower"
+        android:background="#b4ecb4"
+        android:text="Birds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dogButton" />
+
+    <Button
+        android:id="@+id/bunnyButton"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/indieflower"
+        android:background="#b4ecb4"
+        android:text="Bunnies"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birdButton" />
+
+    <Button
+        android:id="@+id/lizardButton"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/indieflower"
+        android:background="#b4ecb4"
+        android:text="Lizards"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bunnyButton" />
+
+    <!--<Button
         android:id="@+id/goButton"
         android:layout_width="78dp"
         android:layout_height="44dp"
@@ -157,6 +146,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />-->
 
 </android.support.constraint.ConstraintLayout>
