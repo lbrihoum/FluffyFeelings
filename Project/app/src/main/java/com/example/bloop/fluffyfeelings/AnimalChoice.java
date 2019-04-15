@@ -54,4 +54,6 @@ public class AnimalChoice extends AppCompatActivity {
             }
         });
     }
+
 }
+
