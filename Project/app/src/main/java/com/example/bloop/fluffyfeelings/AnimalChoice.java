@@ -3,13 +3,13 @@ package com.example.bloop.fluffyfeelings;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 public class AnimalChoice extends AppCompatActivity implements View.OnClickListener {
 
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_choice);
@@ -29,6 +29,9 @@ public class AnimalChoice extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        System.out.println("VID: " + v.getId());
+        System.out.println("Catto: " + R.id.catButton);
+        System.out.println("Doggo: " + R.id.dogButton);
         Intent intent = new Intent(AnimalChoice.this, AnimalView.class);
         switch (v.getId()) {
             case R.id.catButton:

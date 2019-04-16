@@ -1,45 +1,56 @@
 package com.example.bloop.fluffyfeelings;
 
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
-import android.content.Intent;
+import android.widget.ImageView;
 
 public class AnimalView extends AppCompatActivity {
 
+    ImageView animalImage;
+    Button likeButton;
+    boolean cats;
+    boolean dogs;
+    boolean birds;
+    boolean bunnies;
+    boolean lizards;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_animal_view);
+
+        animalImage = findViewById(R.id.placeholder);
+        likeButton = findViewById(R.id.like_button);
+        likeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         Bundle bundle = getIntent().getExtras();
-        boolean cats = bundle.getBoolean("cats",true);
-        boolean dogs = bundle.getBoolean("dogs",true);
-        boolean birds = bundle.getBoolean("birds", true);
-        boolean bunnies = bundle.getBoolean("bunnies", true);
-        boolean lizards = bundle.getBoolean("lizards", true);
-        if(cats) {
-            //insert code for pulling cat pics from the firebase
+        assert bundle != null;
+        cats = bundle.getBoolean("cats",false);
+        dogs = bundle.getBoolean("dogs",false);
+        birds = bundle.getBoolean("birds", false);
+        bunnies = bundle.getBoolean("bunnies", false);
+        lizards = bundle.getBoolean("lizards", false);
+
+        if (cats) {
+            animalImage.setImageResource(R.drawable.cat);
+        } else if (dogs) {
+            animalImage.setImageResource(R.drawable.dog);
+        } else if (birds) {
+            animalImage.setImageResource(R.drawable.puppy_kitty);
+        } else if (bunnies) {
+            animalImage.setImageResource(R.drawable.bunny_transparent);
+        } else if (lizards) {
+            animalImage.setImageResource(R.drawable.golden_ret);
+        } else {
+            animalImage.setImageResource(R.drawable.golden_ret);
         }
-        if(dogs)
-        {
-            //insert code for pulling dog pics from the firebase
-        }
-        if (birds)
-        {
-            //insert code for pulling bird pics from the firebase
-        }
-        if (bunnies)
-        {
-            //insert code for pulling bunny pics from the firebase
-        }
-        if (lizards)
-        {
-            //insert code for pulling lizard pics from the firebase
-        }
-            super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animal_view);
         
     }
 
