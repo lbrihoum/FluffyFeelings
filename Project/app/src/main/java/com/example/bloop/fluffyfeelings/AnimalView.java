@@ -43,13 +43,7 @@ public class AnimalView extends AppCompatActivity {
         reptiles = bundle.getBoolean("reptiles", false);
 
         if (cats) {
-            animalImage.setImageResource(R.drawable.cat1);
-            nextButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    animalImage.setImageResource(R.drawable.cat2);
-                }
-            });
+            catImages();
         }
         else if (dogs) {
             animalImage.setImageResource(R.drawable.dog2);
@@ -91,6 +85,22 @@ public class AnimalView extends AppCompatActivity {
             animalImage.setImageResource(R.drawable.golden_ret);
         }
         
+    }
+
+    public void catImages() {
+        animalImage.setImageResource(R.drawable.cat1);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.cat2);
+            }
+        });
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.cat3);
+            }
+        });
     }
 
 }
