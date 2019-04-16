@@ -46,40 +46,16 @@ public class AnimalView extends AppCompatActivity {
             catImages();
         }
         else if (dogs) {
-            animalImage.setImageResource(R.drawable.dog2);
-            nextButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    animalImage.setImageResource(R.drawable.dog3);
-                }
-            });
+            dogImages();
         }
         else if (birds) {
-            animalImage.setImageResource(R.drawable.bird1);
-            nextButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    animalImage.setImageResource(R.drawable.bird3);
-                }
-            });
+            birdImages();
         }
         else if (fluffies) {
-            animalImage.setImageResource(R.drawable.bunny_transparent);
-            nextButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    animalImage.setImageResource(R.drawable.cat2);
-                }
-            });
+            fluffyImages();
         }
         else if (reptiles) {
-            animalImage.setImageResource(R.drawable.rept1);
-            nextButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    animalImage.setImageResource(R.drawable.rept2);
-                }
-            });
+            reptileImages();
         }
         else {
             animalImage.setImageResource(R.drawable.golden_ret);
@@ -95,12 +71,78 @@ public class AnimalView extends AppCompatActivity {
                 animalImage.setImageResource(R.drawable.cat2);
             }
         });
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                animalImage.setImageResource(R.drawable.cat3);
+                animalImage.setImageResource(R.drawable.cat1);
             }
         });
     }
+
+    public void dogImages() {
+        animalImage.setImageResource(R.drawable.dog2);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.dog3);
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.dog2);
+            }
+        });
+    }
+
+    public void birdImages() {
+        animalImage.setImageResource(R.drawable.bird1);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.bird3);
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.bird1);
+            }
+        });
+    }
+
+    public void fluffyImages() {
+        animalImage.setImageResource(R.drawable.bunny_transparent);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.cat2);
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.bunny_transparent);
+            }
+        });
+    }
+
+    public void reptileImages() {
+        animalImage.setImageResource(R.drawable.rept1);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.rept2);
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animalImage.setImageResource(R.drawable.rept1);
+            }
+        });
+    }
+
+
 
 }
