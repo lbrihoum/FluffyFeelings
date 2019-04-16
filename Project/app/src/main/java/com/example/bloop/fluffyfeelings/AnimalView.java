@@ -10,11 +10,13 @@ public class AnimalView extends AppCompatActivity {
 
     ImageView animalImage;
     Button likeButton;
+    Button nextButton;
+    Button backButton;
     boolean cats;
     boolean dogs;
     boolean birds;
-    boolean bunnies;
-    boolean lizards;
+    boolean fluffies;
+    boolean reptiles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +24,13 @@ public class AnimalView extends AppCompatActivity {
         setContentView(R.layout.activity_animal_view);
 
         animalImage = findViewById(R.id.placeholder);
+        nextButton = findViewById(R.id.next_button);
+        backButton = findViewById(R.id.back_button);
         likeButton = findViewById(R.id.like_button);
         likeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                likeButton.setBackgroundResource(R.drawable.like_button_pressed);
             }
         });
 
@@ -35,20 +39,55 @@ public class AnimalView extends AppCompatActivity {
         cats = bundle.getBoolean("cats",false);
         dogs = bundle.getBoolean("dogs",false);
         birds = bundle.getBoolean("birds", false);
-        bunnies = bundle.getBoolean("bunnies", false);
-        lizards = bundle.getBoolean("lizards", false);
+        fluffies = bundle.getBoolean("fluffies", false);
+        reptiles = bundle.getBoolean("reptiles", false);
 
         if (cats) {
-            animalImage.setImageResource(R.drawable.cat);
-        } else if (dogs) {
-            animalImage.setImageResource(R.drawable.dog);
-        } else if (birds) {
-            animalImage.setImageResource(R.drawable.puppy_kitty);
-        } else if (bunnies) {
+            animalImage.setImageResource(R.drawable.cat1);
+            nextButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    animalImage.setImageResource(R.drawable.cat2);
+                }
+            });
+        }
+        else if (dogs) {
+            animalImage.setImageResource(R.drawable.dog2);
+            nextButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    animalImage.setImageResource(R.drawable.dog3);
+                }
+            });
+        }
+        else if (birds) {
+            animalImage.setImageResource(R.drawable.bird1);
+            nextButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    animalImage.setImageResource(R.drawable.bird3);
+                }
+            });
+        }
+        else if (fluffies) {
             animalImage.setImageResource(R.drawable.bunny_transparent);
-        } else if (lizards) {
-            animalImage.setImageResource(R.drawable.golden_ret);
-        } else {
+            nextButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    animalImage.setImageResource(R.drawable.cat2);
+                }
+            });
+        }
+        else if (reptiles) {
+            animalImage.setImageResource(R.drawable.rept1);
+            nextButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    animalImage.setImageResource(R.drawable.rept2);
+                }
+            });
+        }
+        else {
             animalImage.setImageResource(R.drawable.golden_ret);
         }
         

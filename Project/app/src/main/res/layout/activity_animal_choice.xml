@@ -117,9 +117,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="162dp"
         android:layout_marginTop="36dp"
-        android:fontFamily="@font/indieflower"
         android:background="#b4ecb4"
-        android:text="Bunnies"
+        android:fontFamily="@font/indieflower"
+        android:text="Fluffies"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/birdButton" />
 
@@ -129,9 +129,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="162dp"
         android:layout_marginTop="36dp"
-        android:fontFamily="@font/indieflower"
         android:background="#b4ecb4"
-        android:text="Lizards"
+        android:fontFamily="@font/indieflower"
+        android:text="Reptiles"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bunnyButton" />
 

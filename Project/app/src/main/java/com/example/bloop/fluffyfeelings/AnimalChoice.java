@@ -3,7 +3,6 @@ package com.example.bloop.fluffyfeelings;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,13 +17,13 @@ public class AnimalChoice extends AppCompatActivity implements View.OnClickListe
         Button dogButton = findViewById(R.id.dogButton);
         Button birdButton = findViewById(R.id.birdButton);
         Button bunnyButton = findViewById(R.id.bunnyButton);
-        Button lizardButton = findViewById(R.id.lizardButton);
+        Button reptileButton = findViewById(R.id.lizardButton);
 
         catButton.setOnClickListener(this);
         dogButton.setOnClickListener(this);
         birdButton.setOnClickListener(this);
         bunnyButton.setOnClickListener(this);
-        lizardButton.setOnClickListener(this);
+        reptileButton.setOnClickListener(this);
     }
 
     @Override
@@ -47,11 +46,11 @@ public class AnimalChoice extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.bunnyButton:
-                intent.putExtra("bunnies", true);
+                intent.putExtra("fluffies", true);
                 startActivity(intent);
                 break;
             case R.id.lizardButton:
-                intent.putExtra("lizards", true);
+                intent.putExtra("reptiles", true);
                 startActivity(intent);
                 break;
         }
