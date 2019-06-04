@@ -6,3 +6,4 @@ When a user interacts with our application, they are welcomed with the User Logi
 ## Animal Choice Page
 The user then navigates to the Animal Choice Page. On this page, users are able to select one category to curate the content they wish to see. Users are only able to view one category at a time.
 ## Animal View Page
+The Animal View Page is where a user is able to interact with the app’s main content. The heart button is where users can like photos of the animals they view. The back and next buttons are designed to show pictures from the Firebase database of the users animal choosing. The database for the animal pictures are from Unsplash.com that we are updating for now.
