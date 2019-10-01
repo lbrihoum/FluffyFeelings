@@ -13,11 +13,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -57,14 +55,6 @@ public class Login extends AppCompatActivity {//implements GoogleApiClient.OnCon
         loginBtn = findViewById(R.id.loginButton);
         googleButton = findViewById(R.id.googleSignIn);
 
-
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
         auth = FirebaseAuth.getInstance();
 
         googleButton.setOnClickListener(new View.OnClickListener() {
@@ -82,9 +72,6 @@ public class Login extends AppCompatActivity {//implements GoogleApiClient.OnCon
 
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
-
-
-        //mGoogleSignInClient.signOut().addOnCompleteListener(this)
     }
 
     private void signOut() {
